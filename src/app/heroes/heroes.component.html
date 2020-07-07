@@ -1,0 +1,39 @@
+<h2>{{ hero.name | uppercase }} Detalhe</h2>
+<ul class="list-group">
+    <li 
+        class="list-group-item d-flex justify-content-between align-items-center"
+        *ngFor="let hero of heroes"
+        (click)="onSelect(hero)"
+        [class.active]="hero === selectedHero"
+    >
+        {{ hero.name }}
+        
+        <span class="badge badge-primary badge-pill">{{ hero.id }}</span>
+        
+    </li>
+</ul>
+
+<div *ngIf="selectedHero">
+
+    <div class="card">
+        <div class="card body">
+            <div class="form group">
+                <label>ID</label>
+                <input type="text" class="form-control" readonly value="{{ selectedHero.id }}" />
+            </div>
+        </div>
+    
+        <div class="card body">
+            <div class="form group">
+                <label>Nome</label>
+                <input 
+                type="text" 
+                class="form-control" 
+                placeholder="name"
+                [(ngModel)]="selectedHero.name" 
+                />
+            </div>
+        </div>
+    </div>
+
+</div>
