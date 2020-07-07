@@ -13,27 +13,4 @@
     </li>
 </ul>
 
-<div *ngIf="selectedHero">
-
-    <div class="card">
-        <div class="card body">
-            <div class="form group">
-                <label>ID</label>
-                <input type="text" class="form-control" readonly value="{{ selectedHero.id }}" />
-            </div>
-        </div>
-    
-        <div class="card body">
-            <div class="form group">
-                <label>Nome</label>
-                <input 
-                type="text" 
-                class="form-control" 
-                placeholder="name"
-                [(ngModel)]="selectedHero.name" 
-                />
-            </div>
-        </div>
-    </div>
-
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

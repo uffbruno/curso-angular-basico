@@ -1,0 +1,24 @@
+<div *ngIf="hero">
+
+    <div class="card">
+        <div class="card body">
+            <div class="form group">
+                <label>ID</label>
+                <input type="text" class="form-control" readonly value="{{ hero.id }}" />
+            </div>
+        </div>
+    
+        <div class="card body">
+            <div class="form group">
+                <label>Nome</label>
+                <input 
+                type="text" 
+                class="form-control" 
+                placeholder="name"
+                [(ngModel)]="hero.name" 
+                />
+            </div>
+        </div>
+    </div>
+
+</div>
