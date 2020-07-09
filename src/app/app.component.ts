@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'uffbruno::Lista de Heróis';
+
+  navItems: { path: string; text: string }[] = [
+    { path: '/dashboard', text: 'Dashboard'},
+    { path: '/heroes', text: 'Heróis' }
+  ]
 }
