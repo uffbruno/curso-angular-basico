@@ -1,0 +1,74 @@
+Curso de Angular - 06/07/2020 a 10/07/2020 - Paulo Melo
+Angular - estrutura de design de aplicativo e plataforma de desenvolvimento para criar aplicativos de página única 
+- Cross Platform
+	- Web, PWA, Native e Desktop
+
+- Productivity
+	- Templates, Angular CLI e IDEs
+	
+- Speed and Performance
+	- Code Generation, Universal e Code Splitting
+	
+- Full Development Story
+	- Testing, Animation e Accessibility
+	
+Site tradicional MVC
+	- Primeira requisição, trás HTML, CSS e Javascript.
+	- Demais requisições, apenas HTML.
+	
+Site SPA - Single Page Application
+	- Primeira: HTML, CSS, Javascript
+	- Segunda: JSON
+
+Electron?
+Firebase - NoSQL na nuvem - Backend na nuvem!!!
+StackBlitz - IDE na nuvem
+Node?
+VS Studio Code -> baixar para os próximos dias do curso
+Bootstrap???
+
+* Typescript (Javascript)
+	- extensão .ts
+	- const -> declara constantes
+	- let -> declara variáveis: let i: number = 3;
+
+*Angular CLI
+	- criar novo projeto: ng new <nome do projeto>
+	- vai criar uma pasta com todos os arquivos necessários para iniciar o projeto
+	- ng serve -> compila todo o projeto e o 'serve' para ser executado pelo browser
+
+*Diretivas Nativas
+
+*One way data bind
+
+*Two way data bind
+	- liga uma propriedade ao html
+	- dado flui nas duas direções
+	
+* Mocks - dados fictícios
+	- Simulam objetos reais
+	- Permite que uma idéia seja validada
+	- Útil quando o backend ainda não existe ou está fora do ar
+
+*Eventos do usuário
+
+*CRUD
+
+*Pipes
+	- transformar sem modificar dado base
+	- mantém o dado original sem modificação
+
+*Services
+	- Crucial para o curso! Reler os slides, pesquisar mais na internet
+	- Rever a aula inteira do dia 08/07 para poder acompanhar as mudanças no código
+	
+*Roteamento
+	- ng g module app-routing --flat --module=app
+
+*Comunicação entre componentes
+
+*Bootstrap
+
+*Biblioteca externa
+
+*Deploy
