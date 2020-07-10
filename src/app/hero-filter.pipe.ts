@@ -13,8 +13,11 @@ export class HeroFilterPipe implements PipeTransform {
       return heroes;
     }
 
-    return heroes.filter(
-      hero => hero.name.toLocaleLowerCase().indexOf(name) != -1
+    return (
+      heroes &&
+      heroes.filter(
+        hero => hero.name.toLocaleLowerCase().indexOf(name) != -1
+      )
     )
   }
 
