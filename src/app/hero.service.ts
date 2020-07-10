@@ -26,7 +26,7 @@ export class HeroService {
   getHeroes(): Observable<Hero[]> {
 
 
-    return this.http.get<Hero[]>(this.heroesUrl).pipe(
+    return this.http.get<Hero[]>(this.heroesUrl, this.httpOptions).pipe(
       tap((heroes) => this.log(`obtida lista de ${heroes.length} heróis`)),
       catchError(this.handleError<Hero[]>('getHeroes', []))
     );
@@ -34,7 +34,7 @@ export class HeroService {
 
 
   getHero(id: number): Observable<Hero> {
-    return this.http.get<Hero>(`${this.heroesUrl}/${id}`).pipe(
+    return this.http.get<Hero>(`${this.heroesUrl}/${id}`, this.httpOptions).pipe(
       tap(() => this.log("obtida lista de heróis")),
       catchError(this.handleError<Hero>('getHero'))
     );
@@ -71,7 +71,7 @@ export class HeroService {
       return of([]);
     }
 
-    return this.http.get<Hero[]>(`${this.heroesUrl}/?name=${term}`).pipe(
+    return this.http.get<Hero[]>(`${this.heroesUrl}/?name=${term}`, this.httpOptions).pipe(
       tap((heroes) => {
         heroes && heroes.length ? this.log(`encontrado termo = ${term} e ${heroes.length} heróis`)
           : this.log(`não encontrado para termo = ${term}`)
