@@ -49,6 +49,10 @@ Bootstrap???
 	- Simulam objetos reais
 	- Permite que uma idéia seja validada
 	- Útil quando o backend ainda não existe ou está fora do ar
+	- angular-in-memory-api -> gera um endpoint para simular o backend
+		- npm i angular-in-memory-web-api --save
+		
+	- ENDPOINT?
 
 *Eventos do usuário
 

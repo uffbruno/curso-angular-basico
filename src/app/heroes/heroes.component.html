@@ -1,15 +1,34 @@
-<ul class="list-group">
-    <li 
-        class="list-group-item d-flex justify-content-between align-items-center"
-        *ngFor="let hero of heroes"
-        (click)="onSelect(hero)"
-        [class.active]="hero === selectedHero"
-    >
-        {{ hero.name }}
-        
-        <span class="badge badge-primary badge-pill">{{ hero.id }}</span>
-        
-    </li>
-</ul>
+<h2>My Heroes</h2>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<div class="row">
+  <div class="col">
+    <app-hero-add (add)="onAdd($event)"></app-hero-add>
+  </div>
+
+  <div class="col">
+    <app-search-input (search)="onFilter($event)"></app-search-input>
+  </div>
+
+</div>
+
+<ul class="list-group mb-3">
+  <!-- id -->
+  <li class="list-group-item" *ngFor="let hero of heroes | heroFilter: filter">
+    <div class="d-flex">
+      <div class="p-2">
+        <span class="badge badge-primary badge-pill">{{ hero.id }}</span>
+      </div>
+      <div class="p-2">
+        <a routerLink="/heroes/{{ hero.id }}">
+          {{ hero.name }}
+        </a>
+      </div>
+
+      <div class="p-2 ml-auto">
+        <button class="btn btn-danger" (click)="delete(hero)">
+          X
+        </button>
+      </div>
+    </div>
+  </li>
+</ul>
